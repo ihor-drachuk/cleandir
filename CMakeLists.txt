@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.16)
+
+project(cleardir LANGUAGES CXX)
+
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+find_package(Qt5 COMPONENTS Core REQUIRED)
+
+add_executable(cleardir main.cpp)
+target_link_libraries(cleardir PRIVATE Qt5::Core)
